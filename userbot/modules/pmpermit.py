@@ -14,13 +14,14 @@ from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID, PM_AUTO_BAN,
                      LASTMSG, LOGS)
 
 from userbot.events import register
-
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`HeY! This is an automated message.\n\n`"
-    "`I haven't approved you to PM yet.`"
-    "`Please wait for me to look in, I mostly approve PMs.\n\n`"
-    "`Until then, please don't spam my Mastor's PM, you'll get blocked and reported if you do so!`")
+    "`❌ANDA MEMASUKI KAWASAN IntanArap❌.`\n"
+    "`Tunggu Sampai @IntanArap Melihat Ini!`\n"
+    "`Until then, please don't spam my PM..`\n"
+    "`Terimakasih Semoga Anda mengerti`\n\n"
+    "`*This is an automated message`\n"
+    "`💖@IntanArap💖`")
 # =================================================================
 
 
@@ -55,7 +56,10 @@ async def permitpm(event):
                                 search=UNAPPROVED_MSG):
                             await message.delete()
                         await event.reply(UNAPPROVED_MSG)
-                    LASTMSG.update({event.chat_id: event.text})
+                    LASTMSG.update({eve"`Kau ini Sudah dibilangin masih aja susah  gtd .`\n"
+                        "`You have been BLOCKED and reported as SPAM, until further notice.`"
+                    )
+nt.chat_id: event.text})
                 else:
                     await event.reply(UNAPPROVED_MSG)
                     LASTMSG.update({event.chat_id: event.text})
@@ -69,10 +73,9 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "`You were spamming my Mastor's PM, which I didn't like.`\n"
-                        "`You have been BLOCKED and reported as SPAM, until further notice.`"
+                        "`Halah Ieu Budak Teu Ngarti Pisan?.`\n"
+                        "`SIA NGGEUS DI BLOKIR KU AING, Tunggu We Sampe Aing Unblok!.`"
                     )
-
                     try:
                         del COUNT_PM[event.chat_id]
                         del LASTMSG[event.chat_id]
